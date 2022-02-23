@@ -19,7 +19,7 @@ namespace MilkTotalsApp
             Console.WriteLine("Press any key to Exit");
             Console.ReadKey();
 
-            Console.WriteLine("Hello World!!!")
+            Console.WriteLine("Hello World")
         }
     }
 }
