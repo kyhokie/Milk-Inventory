@@ -9,21 +9,33 @@ namespace MilkTotalsApp
     {
         static void Main(string[] args)
         {
-            int amt = 500;
+            int amt = 7773;
             int dep, wit;
             int ch, pin = 0, x=0;
-            Console.WriteLine("Your pin number====> ");
+            Console.WriteLine("Who are we feeding today?");
             pin=int.Parse(Console.ReadLine());
 
-            while(true)
             {
-                Console.WriteLine(" A T M  S E R V I C E S\n");
-                Console.WriteLine("========================\n");
-                Console.WriteLine("1. Check Account Balance\n");
-                Console.WriteLine("2. Withdraw\n");
-                Console.WriteLine("3. Deposit\n");
+                Console.Clear();
+                Console.Title = "Milk Tracking System";
+                //Console.WriteLine("Welcome to your milk tracking system.\n");
+                //Console.WriteLine("MORE TEXT HERE.");
+            }
+
+            static void Main(string fullName)
+            {
+                Console.WriteLine("Welcome back, " + fullName);
+            }
+
+            while (true)
+            {
+                Console.WriteLine("\nMilk Inventory");
+                Console.WriteLine("====================\n");
+                Console.WriteLine("1. Check Inventory");
+                Console.WriteLine("2. Enter a feeding");
+                Console.WriteLine("3. Add to freezer");
                 Console.WriteLine("4. Exit\n\n\n");
-                Console.WriteLine("Select your Option ===>  ");
+                Console.WriteLine("Select your Option:");
                 ch = int.Parse(Console.ReadLine());
                 switch(ch)
                 {
@@ -31,7 +43,7 @@ namespace MilkTotalsApp
                         Console.WriteLine("\n\n Your Balance is : {0} ",amt);
                         break;
                     case 2:
-                        Console.WriteLine("Amount to be Withdrawn ");
+                        Console.WriteLine("How much was consumed? ");
                         wit=int.Parse(Console.ReadLine());
                         if (wit %100 !=0)
                         {
@@ -39,13 +51,12 @@ namespace MilkTotalsApp
                         }
                         else if (wit > (amt - 200))
                         {
-                            Console.WriteLine("\n Insufficient Funds");
+                            Console.WriteLine("\n You do not have enough milk in inventory");
                         }
                         else
                         {
                             amt = amt - wit;
-                            Console.WriteLine("\n Take Your Money");
-                            Console.WriteLine("\n Your Current Balance is {0},amt");
+                            Console.WriteLine("\n You have {0} remaining in inventory",amt);
 
 
                         }
@@ -59,6 +70,7 @@ namespace MilkTotalsApp
 
                         break;
                     case 4:
+
                         Console.WriteLine("\n T H A N K  Y O U ");
 
                         break;
