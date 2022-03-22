@@ -1,25 +1,45 @@
-﻿namespace MilkTotalsApp
+﻿using System.Text.Json;
+
+namespace MilkInventory2
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
-            //SIMPLIFY THIS  -- this is where we would put in json
-            int amt = 7773;
-            int dep, wit;
-            int ch, pin = 0, x=0;
-            Console.WriteLine("Who are we feeding today?");
-            pin = int.Parse(Console.ReadLine());
-            //IDEA: remove name
+            //START JSON
+            var fileName = "MilkInventory.json";
+
+            var milkInventory = new MilkInventory();
+
+            if (File.Exists(fileName))
+            {
+                var fileText = File.ReadAllText(fileName);
+                var mightbeMilkInventory = JsonSerializer.Deserialize<MilkInventory>(fileText);
+
+                if (mightbeMilkInventory != null);
+                {
+                    milkInventory = mightbeMilkInventory;
+                }
+
+            }
+            
+            //int amt = 7773;
+            //int dep, wit;
+            //int ch, pin = 0, x=0;
+            //Console.WriteLine("Who are we feeding today?");
+            //pin = int.Parse(Console.ReadLine());
+            ////IDEA: remove name
 
              
             Console.Clear();
-            Console.Title = "Milk Tracking System";
+            Console.Title = "Milk Inventory System";
             //Console.WriteLine("Welcome to your milk tracking system.\n");
             //Console.WriteLine("MORE TEXT HERE.");
 
             //work on var keep going -- in while statement ex: while keep going initialize to true.  Exit cmd is set to false
-            while (true)
+            var keepGoing = true;
+            
+            while (keepGoing)
             {
                 Console.WriteLine("\nMilk Inventory");
                 Console.WriteLine("====================\n");
@@ -29,7 +49,8 @@
                 Console.WriteLine("4. Exit\n\n\n");
                 Console.WriteLine("Select your Option:");
                 ch = int.Parse(Console.ReadLine());
-                switch(ch)
+                switch (ch)
+                    //^change ch to command
                 {
                     case 1:
                         Console.WriteLine("\n\n Your Balance is : {0} ",amt);
@@ -73,12 +94,12 @@
 
             }
 
-            class TestDataModel
-        {
-            public int val1 { get; set; }
-            public string val2 { get; set; }    
-        }
-        
+            //var jsonString = JsonSerializer.Serialize(milkInventory2);
+            //File.WriteAllText(fileName, jsonString);
+
+            //JsonSerializer.Deserialize(milkInventory2);
+            //File.WriteAllText(fileName, jsonString);
+
         }
     }
 }
