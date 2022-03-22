@@ -1,6 +1,6 @@
-﻿namespace Converter
+﻿namespace MilkInventory2
 {
-     class MillilitersToOuncesConverter
+     public class MillilitersToOuncesConverter
     {
         //        
     }

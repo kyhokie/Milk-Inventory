@@ -4,10 +4,10 @@
     {
         public int Amount { get; set; }
         
-        public int MilkInventory()
-            {
+        public int GetInventory()
+        {
             return Amount;
-            }
+        }
 
         public int Withdraw(int amountToWithdraw)
         {
