@@ -1,7 +1,8 @@
-﻿namespace Milk_Inventory_2
+﻿namespace Converter
 {
-    public class MillilitersToOuncesConverter
+     class MillilitersToOuncesConverter
     {
-        //number of mL * 0.0338
+        //        
     }
 }
+//number of mL * 0.0338

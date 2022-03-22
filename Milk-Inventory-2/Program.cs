@@ -4,7 +4,7 @@ namespace MilkInventory2
 {
     class Program
     {
-        static void Main()
+        public static void Main()
         {
             //START JSON
             var fileName = "MilkInventory.json";
@@ -70,7 +70,7 @@ namespace MilkInventory2
                 //}
                 //        else if (amountConsumed > (milkInventory))
                 //{
-                //    Console.WriteLine("\n You depleted your inventory.");
+                //    Console.WriteLine("\n You have depleted your inventory.");
                 //}
                 //else
                 //{
@@ -101,9 +101,9 @@ namespace MilkInventory2
 
                     case 5:
                         keepGoing = false;
-                        //Console.WriteLine("Press any key to confirm Exit");
-                        //Console.ReadKey();
-                        //Console.WriteLine("Thank you!");
+                        Console.WriteLine("Press any key to confirm Exit");
+                        Console.ReadKey();
+                        Console.WriteLine("Thank you!");
                         break;
 
 
@@ -111,10 +111,11 @@ namespace MilkInventory2
 
             }
 
-            var jsonString = JsonSerializer.Serialize(milkInventory2);
+            var jsonString = JsonSerializer.Serialize(milkInventory);
             File.WriteAllText(fileName, jsonString);
 
-            JsonSerializer.Deserialize(milkInventory2);
+            JsonSerializer.Deserialize(milkInventory);
+            //if I add a 2, it works one way
             File.WriteAllText(fileName, jsonString);
         }
     }
