@@ -43,50 +43,67 @@ namespace MilkInventory2
             {
                 Console.WriteLine("\nMilk Inventory");
                 Console.WriteLine("====================\n");
-                Console.WriteLine("1. Check Inventory");
-                Console.WriteLine("2. Enter a feeding");
-                Console.WriteLine("3. Add to freezer");
-                Console.WriteLine("4. Exit\n\n\n");
+                Console.WriteLine("1. Check my Inventory");
+                Console.WriteLine("2. Enter a feeding (in mL)");
+                Console.WriteLine("3. Add to freezer (in mL)");
+                Console.WriteLine("4. Convert my Inventory to ounces");
+                Console.WriteLine("5. Exit\n\n\n");
                 Console.WriteLine("Select your Option:");
-                ch = int.Parse(Console.ReadLine());
-                switch (ch)
+                var command = int.Parse(Console.ReadLine());
+                //ch = int.Parse(Console.ReadLine());
+                switch (command)
                     //^change ch to command
                 {
                     case 1:
-                        Console.WriteLine("\n\n Your Balance is : {0} ",amt);
+                        Console.WriteLine("\n\n Your Milk Inventory is: {MilkInventory.GetInventory()}.");
+        
                         break;
                     case 2:
-                        Console.WriteLine("How much was consumed? ");
-                        wit=int.Parse(Console.ReadLine());
-                        if (wit %100 !=0)
-                        {
-                            Console.WriteLine("\n\nEnter the amount in Multiples of 100");
-                        }
-                        else if (wit > (amt - 200))
-                        {
-                            Console.WriteLine("\n You do not have enough milk in inventory");
-                        }
-                        else
-                        {
-                            amt = amt - wit;
-                            Console.WriteLine("\n You have {0} remaining in inventory",amt);
+                        Console.WriteLine("How many milliliters of milk were consumed? ");
+                        var = amountConsumed = int.Parse(Console.ReadLine());
+                        milkinventory.Add(amountConsumed);
 
+                        //wit=int.Parse(Console.ReadLine());
+                        //if (wit %100 !=0)
+                        //{
+                        //    Console.WriteLine("\n\nEnter the amount in Multiples of 100");
+                //}
+                //        else if (amountConsumed > (milkInventory))
+                //{
+                //    Console.WriteLine("\n You depleted your inventory.");
+                //}
+                //else
+                //{
+                //    amt = amt - wit;
+                //    Console.WriteLine("\n You have {0} remaining in inventory",amt);
+                //}
+                break;
 
-                        }
-
-                        break;
                     case 3:
-                        Console.WriteLine("\n Enter the amount to be deposited");
-                            dep=int.Parse(Console.ReadLine());
-                        amt = amt + dep;
-                        Console.WriteLine("\nCurrent balance is {0}", amt);
+                        Console.WriteLine("\n How many milliliters of milk are we adding to inventory? ");
+                        var amountToAdd = int.Parse(Console.ReadLine());
+                        milkinventory.Add(amountToAdd);
+                        //    dep=int.Parse(Console.ReadLine());
+                        //amt = amt + dep;
+                        //Console.WriteLine("\nThis brings your inventory to ______ Current balance is {0}", amt);
 
                         break;
-                    case 4:
-                        Console.WriteLine("Press any key to confirm Exit");
-                        Console.ReadKey();
-                        Console.WriteLine("Thank you!");
 
+                    case 4:
+                        var inventoryInMilliliters = milkInventory.GetInventoryinMilliliters();
+                        var inventoryInOunces = MillilitersToOuncesConverter.ConvertMillilitersToOunces(inventoryInOunces);
+                        Console.WriteLine($"\n  Your inventory is {inventoryInOunces} ounces.");
+                        //dep = int.Parse(Console.ReadLine());
+                        //amt = amt + dep;
+                        //Console.WriteLine("\nThis brings your inventory to ______ Current balance is {0}", amt);
+
+                        break;
+
+                    case 5:
+                        keepGoing = false;
+                        //Console.WriteLine("Press any key to confirm Exit");
+                        //Console.ReadKey();
+                        //Console.WriteLine("Thank you!");
                         break;
 
 
@@ -94,12 +111,11 @@ namespace MilkInventory2
 
             }
 
-            //var jsonString = JsonSerializer.Serialize(milkInventory2);
-            //File.WriteAllText(fileName, jsonString);
+            var jsonString = JsonSerializer.Serialize(milkInventory2);
+            File.WriteAllText(fileName, jsonString);
 
-            //JsonSerializer.Deserialize(milkInventory2);
-            //File.WriteAllText(fileName, jsonString);
-
+            JsonSerializer.Deserialize(milkInventory2);
+            File.WriteAllText(fileName, jsonString);
         }
     }
 }

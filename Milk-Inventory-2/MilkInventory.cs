@@ -1,9 +1,30 @@
 ﻿namespace MilkInventory2
 {
-    internal class MilkInventory
+    public class MilkInventory
     {
-        public MilkInventory()
+        public int Amount { get; set; }
+        
+        public int MilkInventory()
+            {
+            return Amount;
+            }
+
+        public int Withdraw(int amountToWithdraw)
         {
+            Amount -= amountToWithdraw;
+
+            return Amount;
         }
+
+        public int Add(int amountToAdd)
+        {
+            Amount += amountToAdd;
+
+            Amount;
+        }
+
+        //MilkInventory()
+        //{
+        //}
     }
 }
