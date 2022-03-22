@@ -1,8 +1,10 @@
 ﻿namespace MilkInventory2
 {
-     public class MillilitersToOuncesConverter
+    public class MillilitersToOuncesConverter
     {
-        //        
+        public static int ConvertMillilitersToOunces(int milliliters)
+        {
+            return milliliters * 0.0338
+        }
     }
 }
-//number of mL * 0.0338
