@@ -1,4 +1,8 @@
 ﻿using System.Text.Json;
+//ACTION-Bill: NEED README File
+//ACTION-Bill: Create Unit Test
+//ACTION-Bill: Complete converter class
+//STUCK: json not working?  due to bin in .gitignore?
 
 namespace MilkInventory2
 {
@@ -50,18 +54,19 @@ namespace MilkInventory2
                 {
                     case 1:
                         Console.WriteLine("\n\n Your Milk Inventory is: {MilkInventory.GetInventory()}.");
+                        var getInventory
                         break;
 
                     case 2:
                         Console.WriteLine("How many milliliters of milk were consumed? ");
                         var amountConsumed = int.Parse(Console.ReadLine());
-                        milkinventory.Add(amountConsumed);
+                        milkInventory.Add(amountConsumed);
                         break;
 
                     case 3:
                         Console.WriteLine("\n How many milliliters of milk are we adding to inventory? ");
                         var amountToAdd = int.Parse(Console.ReadLine());
-                        milkinventory.Add(amountToAdd);
+                        milkInventory.Add(amountToAdd);
                         break;
 
                     case 4:
