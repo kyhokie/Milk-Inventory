@@ -20,11 +20,7 @@
         {
             Amount += amountToAdd;
 
-            Amount;
+            return Amount;
         }
-
-        //MilkInventory()
-        //{
-        //}
     }
 }

@@ -29,9 +29,6 @@ namespace MilkInventory2
             
             Console.Clear();
             Console.Title = "Milk Inventory System";
-            ////Console.WriteLine("Welcome to your milk tracking system.\n");
-            ////Console.WriteLine("MORE TEXT HERE.");
-
 
             //BEGIN LOOP
             var keepGoing = true;
@@ -53,14 +50,13 @@ namespace MilkInventory2
                 switch (command)
                 {
                     case 1:
-                        Console.WriteLine("\n\n Your Milk Inventory is: {MilkInventory.GetInventory()}.");
-                        var getInventory
+                        Console.WriteLine($"\n\n Your Milk Inventory is: {milkInventory.GetInventory()}.");
                         break;
 
                     case 2:
                         Console.WriteLine("How many milliliters of milk were consumed? ");
                         var amountConsumed = int.Parse(Console.ReadLine());
-                        milkInventory.Add(amountConsumed);
+                        milkInventory.Withdraw(amountConsumed);
                         break;
 
                     case 3:
@@ -70,8 +66,8 @@ namespace MilkInventory2
                         break;
 
                     case 4:
-                        var inventoryInMilliliters = milkInventory.GetInventoryinMilliliters();
-                        var inventoryInOunces = MillilitersToOuncesConverter.ConvertMillilitersToOunces(inventoryInOunces);
+                        var inventoryInMilliliters = milkInventory.GetInventory();
+                        var inventoryInOunces = MillilitersToOuncesConverter.ConvertMillilitersToOunces(inventoryInMilliliters);
                         Console.WriteLine($"\n  Your inventory is {inventoryInOunces} ounces.");
                         break;
 
