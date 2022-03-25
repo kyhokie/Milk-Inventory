@@ -1,8 +1,7 @@
 ﻿using System.Text.Json;
 //ACTION-Bill: NEED README File
-//ACTION-Bill: Create Unit Test
-//ACTION-Bill: Complete converter class
-//STUCK: json not working?  due to bin in .gitignore?
+//ACTION-Bill: Clean up names
+//ACTION-Bill: 
 
 namespace MilkInventory2
 {

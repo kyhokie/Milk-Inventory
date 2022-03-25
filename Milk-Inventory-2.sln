@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31912.275
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Milk-Inventory-2", "Milk-Inventory-2\Milk-Inventory-2.csproj", "{02F61C13-27F2-4823-B534-75DD8E2C372B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Milk-Inventory-2", "Milk-Inventory-2\Milk-Inventory-2.csproj", "{02F61C13-27F2-4823-B534-75DD8E2C372B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Milk-Inventory-2Tests", "Milk-Inventory-2Tests\Milk-Inventory-2Tests.csproj", "{5511C2F9-9FFB-4F1D-8A4E-2C3B728CA80B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{02F61C13-27F2-4823-B534-75DD8E2C372B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{02F61C13-27F2-4823-B534-75DD8E2C372B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{02F61C13-27F2-4823-B534-75DD8E2C372B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5511C2F9-9FFB-4F1D-8A4E-2C3B728CA80B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5511C2F9-9FFB-4F1D-8A4E-2C3B728CA80B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5511C2F9-9FFB-4F1D-8A4E-2C3B728CA80B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5511C2F9-9FFB-4F1D-8A4E-2C3B728CA80B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
