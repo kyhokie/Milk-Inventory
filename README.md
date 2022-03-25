@@ -15,8 +15,8 @@ The csv file in the Repository is not currently in use.
 
 
 
--------------------------------------------------------------------------------------
-| A one paragraph or longer description of what your project is about               |
-| Which 3+ features you have included from the below list to meet the requirements  |
-| Any special instructions required for the reviewer to run your project.           |
--------------------------------------------------------------------------------------
+README REQUIREMENTS 
+A one paragraph or longer description of what your project is about<br>
+Which 3+ features you have included from the below list to meet the requirements<br>
+Any special instructions required for the reviewer to run your project.<br>
+
