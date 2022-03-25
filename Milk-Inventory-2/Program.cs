@@ -1,7 +1,7 @@
 ﻿using System.Text.Json;
 //ACTION-Bill: NEED README File
-//ACTION-Bill: Clean up names
-//ACTION-Bill: 
+//ACTION-Bill: Clean up namespace
+//ACTION-Bill: Add Invalid value handler?
 
 namespace MilkInventory2
 {
@@ -19,19 +19,19 @@ namespace MilkInventory2
                 var fileText = File.ReadAllText(fileName);
                 var mightbeMilkInventory = JsonSerializer.Deserialize<MilkInventory>(fileText);
 
-                if (mightbeMilkInventory != null);
+                if (mightbeMilkInventory != null)
                 {
                     milkInventory = mightbeMilkInventory;
                 }
 
             }
-            
+
             Console.Clear();
             Console.Title = "Milk Inventory System";
 
             //BEGIN LOOP
             var keepGoing = true;
-      
+ 
 
             while (keepGoing)
             {
@@ -44,7 +44,7 @@ namespace MilkInventory2
                 Console.WriteLine("5. Exit\n\n\n");
                 Console.WriteLine("Select your Option:");
                 var command = int.Parse(Console.ReadLine());
-                
+
             //BEGIN CASES
                 switch (command)
                 {
@@ -53,13 +53,13 @@ namespace MilkInventory2
                         break;
 
                     case 2:
-                        Console.WriteLine("How many milliliters of milk were consumed? ");
+                        Console.WriteLine("How many milliliters of milk were consumed?");
                         var amountConsumed = int.Parse(Console.ReadLine());
                         milkInventory.Withdraw(amountConsumed);
                         break;
 
                     case 3:
-                        Console.WriteLine("\n How many milliliters of milk are we adding to inventory? ");
+                        Console.WriteLine("\n How many milliliters of milk are we adding to inventory?");
                         var amountToAdd = int.Parse(Console.ReadLine());
                         milkInventory.Add(amountToAdd);
                         break;
