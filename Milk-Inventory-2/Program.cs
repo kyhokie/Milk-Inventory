@@ -1,7 +1,6 @@
 ﻿using System.Text.Json;
-//ACTION-Bill: NEED README File
-//ACTION-Bill: Clean up namespace
-//ACTION-Bill: Add Invalid value handler?
+//FUTURE ACTION-Bill: Clean up namespace
+//FUTURE ACTION-Bill: Add Invalid value handler?
 
 namespace MilkInventory2
 {
