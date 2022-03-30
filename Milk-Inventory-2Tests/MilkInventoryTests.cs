@@ -13,7 +13,6 @@ namespace MilkInventory2.Tests
 
             var inventory = milkInventory.GetInventory();
             Assert.AreEqual(298, inventory); 
-
         }
 
         [TestMethod()]
