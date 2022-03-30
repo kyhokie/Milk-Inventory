@@ -10,6 +10,7 @@ The features included in the application are:<br>
 -Data is written and read to a JSON file.  That data is used in the application.<br>
 -A conversion tool has been built that converts milliliters to ounces<br>
 -There have been multiple unit tests created<br><br>
+-Data is collected, calculated, and displated<br><br>
 
 NOTE: This application was built in Visual Studio 2022.  Reviewing in an older version of Visual Studio may require language updates.<br><br>
 
