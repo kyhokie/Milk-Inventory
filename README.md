@@ -8,17 +8,11 @@ Check your inventory; Enter a feeding; and, Add to Freezer (Inventory).  These a
 The features included in the application are:<br>
 -A "Master Loop" is in place for user selection.  Option 5 will allow you to exit the loop/application.<br>
 -Data is written and read to a JSON file.  That data is used in the application.<br>
--A conversion tool has been built that converts mL to Ounces<br>
+-A conversion tool has been built that converts milliliters to ounces<br>
 -There have been multiple unit tests created<br><br>
 
-NOTE: This application was built in Visual Studio 2022.  Reviewing in an older version of Visual Studio may require language updates.<br>
+NOTE: This application was built in Visual Studio 2022.  Reviewing in an older version of Visual Studio may require language updates.<br><br>
 
 The csv file in the Repository is not currently in use.<br><br><br><br>
 
-
-
-README REQUIREMENTS <br>
-A one paragraph or longer description of what your project is about<br>
-Which 3+ features you have included from the below list to meet the requirements<br>
-Any special instructions required for the reviewer to run your project.<br>
 
